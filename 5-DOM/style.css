@@ -10,6 +10,9 @@ body {
 
   h2{
     font-size: 50px;
+    font-family: "Doto";
+    font-weight: 800;
+    margin-bottom: 0;
   }
 
   main{
@@ -48,20 +51,26 @@ body {
     border-radius: 25px 0 0 0;
   }
 
-  .entradasTextarea> textarea{
-    background-color: transparent;
-  }
-
   .entradasTextarea>textarea{
+    background-color: transparent;
     padding: 20px;
     line-height: 1.5;
-    font-size: 15px;
+    font-size: 18px;
     outline: none;
     border: 0;
     height: 100%;
     width: 100%;
     box-sizing: border-box;
     overflow:hidden;
+    font-family: "Tomorrow";
+  }
+
+  .entradasTextarea>textarea::placeholder{
+    color: rgb(0, 0, 0);
+    line-height: center;
+    font-size: 20px;
+    font-family: "Atkinson Hyperlegible Mono";
+    opacity: 0.5;
   }
 
   .entradasTextarea>textarea:focus-within{
@@ -81,6 +90,7 @@ body {
     border-left: 0;
     border:2px solid;
     border-left:2px dashed;
+    border-radius: 0 25px 0 0 ;
   }
   .entradasButton>button{
     border: 0;

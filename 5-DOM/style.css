@@ -80,6 +80,7 @@
     font-family: "Atkinson Hyperlegible Mono";
     opacity: 0.5;
     transition: font-size 1s ease;
+    font-style:italic;
   }
 
   .entradasTextarea>textarea:focus-within{
@@ -191,6 +192,63 @@
     }
   }
 
+  @media (max-width: 380px){
+    h2{
+      font-size: 30px;
+    }
+
+    .entradasTextarea>textarea::placeholder{
+      font-size: 12px;
+    }
+
+    button>#send{
+      width: 25px;
+    }
+
+    .entradasTextarea>textarea{
+      font-size: 12px;
+    }
+
+  }
+
+  @media (max-width: 320px){
+
+    section{
+      grid-template-rows: 15% 85%;
+    }
+
+    h2{
+      font-size: 30px;
+    }
+
+    .entradasTextarea>textarea::placeholder{
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    button>#send{
+      width: 15px;
+    }
+
+    .entradasTextarea>textarea{
+      font-size: 10px;
+    }
+
+    .salidas>div>p{
+      font-size: 10px;
+      font-weight: 500;
+    }
+
+    .salidas>div{
+      border-bottom: 1px dashed;
+    }
+
+    .salidas>div>button>#iconDelete{
+      width: 10px;
+    }
+  }
+
+/* 
   @media (max-width: 750px) {
     h2{
       font-size: 40px;
@@ -302,6 +360,6 @@
       width: 10px;
     }
 
-  }
+  } */
 
   

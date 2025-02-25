@@ -1,365 +1,261 @@
-  body {
-    box-sizing: border-box;
-    height: 100vh;
-    background:linear-gradient(to bottom left, #2c3e50, #bdc3c7);
-    margin: 0;
-    padding-top: 3%;
-    text-align: center;
-    overflow: hidden;
-  }
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  background:linear-gradient(to bottom left, #2c3e50, #bdc3c7);
+  margin: 0;
+  padding-top: 3%;
+  text-align: center;
+  overflow: hidden;
+}
 
-  h2{
-    font-size: 50px;
-    font-family: "Doto";
-    font-weight: 800;
-    margin-bottom: 0;
-    transition: font-size 1s ease;
-    
-  }
-
-  main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border: 0;
-    box-sizing: border-box;
-  }
-
-  section{
-    overflow: hidden;
-    height: 600px;
-    width: 900px;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 20% 80%;
-    transition: grid-template-rows 1s ease;
-  }
-
-  .entradas{
-    display: grid;
-    grid-template-columns: 85% 15%;
-  }
+h2{
+  font-size: 50px;
+  font-family: "Doto";
+  font-weight: 800;
+  margin-bottom: 0;
+  transition: font-size 1s ease;
   
-  .entradasTextarea{
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    overflow: hidden;
-    border-top:2px solid;
-    border-right:0;
-    border-bottom:2px solid;
-    border-left:2px solid;
-    border-radius: 25px 0 0 0;
-    transition: border 1s ease;
-  }
+}
 
-  .entradasTextarea>textarea{
-    background-color: transparent;
-    padding: 20px;
-    line-height: 1.5;
-    font-size: 18px;
-    outline: none;
-    border: 0;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    overflow:hidden;
-    font-family: "Tomorrow";
-    transition: font-size 3s ease;
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 0;
+  box-sizing: border-box;
+}
+
+section{
+  overflow: hidden;
+  height: 600px;
+  width: 900px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 80%;
+  transition: grid-template-rows 1s ease;
+}
+
+.entradas{
+  display: grid;
+  grid-template-columns: 85% 15%;
+}
+
+.entradasTextarea{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  border-top:2px solid;
+  border-right:0;
+  border-bottom:2px solid;
+  border-left:2px solid;
+  border-radius: 25px 0 0 0;
+  transition: border 1s ease;
+}
+
+.entradasTextarea>textarea{
+  background-color: transparent;
+  padding: 20px;
+  line-height: 1.5;
+  font-size: 18px;
+  outline: none;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow:hidden;
+  font-family: "Tomorrow";
+  transition: font-size 3s ease;
+}
+
+.entradasTextarea>textarea::placeholder{
+  color: rgb(0, 0, 0);
+  line-height: center;
+  font-size: 20px;
+  font-family: "Atkinson Hyperlegible Mono";
+  opacity: 0.5;
+  transition: font-size 1s ease;
+  font-style:italic;
+}
+
+.entradasTextarea>textarea:focus-within{
+  border-color: #bdc3c7;
+  transition: border-color 0.7s;
+}
+
+.entradasButton{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 0;
+  border-top:2px solid;
+  border-right:2px solid;
+  border-bottom:2px solid;
+  border-left:2px dashed;
+  border-radius: 0 25px 0 0 ;
+  transition: border 1s ease, border-left 1s ease;
+}
+.entradasButton>button{
+  border: 0;
+  outline: none;
+  background-color: transparent;
+}
+
+.entradasButton:hover,
+button>#send:hover{
+  background-color: rgb(0, 0, 0);
+  transition: background-color 1s;
+  fill: white;
+}
+
+.salidas{
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  border-top: 0;
+  overflow:scroll;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Rokkitt";
+}
+
+.salidas::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Elemento <div> añadido mediante createElemnt en jS */
+.salidas>div{
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding:0;
+  border-bottom: 1px solid;
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+
+/* Elemento <p> añadido mediante createElemnt en jS */
+.salidas>div>p{
+  box-sizing: border-box;
+  text-align:left;
+  margin: 0;
+  word-wrap: break-word; 
+  padding: 10px;
+  font-size: 16px;
+  height: 100%;
+  transition: font-size 3s ease;
+
+}
+
+/* Elemento <button> añadido mediante createElemnt en jS */
+.salidas>div>button{
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  height: 100%;
+}
+
+.salidas>div>button>#iconDelete{
+  fill: black;
+  opacity: .5;
+  width: 15px;
+  transition: width 3s ease;
+}
+
+.salidas>div>button>#iconDelete:hover{
+  opacity:1;
+  width: 20px;
+  transition: 1.5s ease;
+}
+
+
+@media (max-width: 922px) {
+  body{
+    padding: 15px;
+  }
+}
+
+@media (max-width: 380px){
+  h2{
+    font-size: 30px;
   }
 
   .entradasTextarea>textarea::placeholder{
-    color: rgb(0, 0, 0);
-    line-height: center;
-    font-size: 20px;
-    font-family: "Atkinson Hyperlegible Mono";
-    opacity: 0.5;
-    transition: font-size 1s ease;
-    font-style:italic;
+    font-size: 12px;
   }
 
-  .entradasTextarea>textarea:focus-within{
-    border-color: #bdc3c7;
-    transition: border-color 0.7s;
+  button>#send{
+    width: 25px;
   }
 
-  .entradasButton{
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-left: 0;
-    border-top:2px solid;
-    border-right:2px solid;
-    border-bottom:2px solid;
-    border-left:2px dashed;
-    border-radius: 0 25px 0 0 ;
-    transition: border 1s ease, border-left 1s ease;
-  }
-  .entradasButton>button{
-    border: 0;
-    outline: none;
-    background-color: transparent;
+  .entradasTextarea>textarea{
+    font-size: 12px;
   }
 
-  .entradasButton:hover,
-  button>#send:hover{
-    background-color: rgb(0, 0, 0);
-    transition: background-color 1s;
-    fill: white;
+}
+
+@media (max-width: 320px){
+
+  section{
+    grid-template-rows: 15% 85%;
   }
 
-  .salidas{
-    display: flex;
-    flex-direction: column;
-    border-right: 2px solid;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    border-top: 0;
-    overflow:scroll;
-    box-sizing: border-box;
-    font-size: 20px;
-    font-family: "Rokkitt";
+  h2{
+    font-size: 30px;
   }
 
-  .salidas::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+  .entradasTextarea>textarea::placeholder{
+    font-size: 9px;
+    font-weight: 700;
   }
 
-  /* Elemento <div> añadido mediante createElemnt en jS */
-  .salidas>div{
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding:0;
-    border-bottom: 1px solid;
-    display: grid;
-    grid-template-columns: 90% 10%;
+  button>#send{
+    width: 15px;
   }
 
-  /* Elemento <p> añadido mediante createElemnt en jS */
+  .entradasTextarea>textarea{
+    font-size: 10px;
+  }
+
   .salidas>div>p{
-    box-sizing: border-box;
-    text-align:left;
-    margin: 0;
-    word-wrap: break-word; 
-    padding: 10px;
-    font-size: 16px;
-    height: 100%;
-    transition: font-size 3s ease;
-
+    font-size: 10px;
+    font-weight: 500;
   }
 
-  /* Elemento <button> añadido mediante createElemnt en jS */
-  .salidas>div>button{
-    overflow: hidden;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    height: 100%;
+  .salidas>div{
+    border-bottom: 1px dashed;
   }
 
   .salidas>div>button>#iconDelete{
-    fill: black;
-    opacity: .5;
-    width: 15px;
-    transition: width 3s ease;
+    width: 10px;
   }
+}
 
-  .salidas>div>button>#iconDelete:hover{
-    opacity:1;
-    width: 20px;
-    transition: 1.5s ease;
+@media (max-width: 280px){
+  h2{
+    font-size: 25px;
   }
+}
 
-
-  @media (max-width: 922px) {
-    body{
-      padding: 15px;
-    }
+@media (max-width: 260px){
+  h2{
+    font-size: 20px;
   }
-
-  @media (max-width: 380px){
-    h2{
-      font-size: 30px;
-    }
-
-    .entradasTextarea>textarea::placeholder{
-      font-size: 12px;
-    }
-
-    button>#send{
-      width: 25px;
-    }
-
-    .entradasTextarea>textarea{
-      font-size: 12px;
-    }
-
-  }
-
-  @media (max-width: 320px){
-
-    section{
-      grid-template-rows: 15% 85%;
-    }
-
-    h2{
-      font-size: 30px;
-    }
-
-    .entradasTextarea>textarea::placeholder{
-      font-size: 9px;
-      font-weight: 700;
-    }
-
-    button>#send{
-      width: 15px;
-    }
-
-    .entradasTextarea>textarea{
-      font-size: 10px;
-    }
-
-    .salidas>div>p{
-      font-size: 10px;
-      font-weight: 500;
-    }
-
-    .salidas>div{
-      border-bottom: 1px dashed;
-    }
-
-    .salidas>div>button>#iconDelete{
-      width: 10px;
-    }
-  }
-
-/* 
-  @media (max-width: 750px) {
-    h2{
-      font-size: 40px;
-    }
-
-    section{
-      grid-template-rows: 15% 85%;
-    }
-
-    button>#send{
-      width: 35px;
-    }
-
-    .entradasTextarea>textarea::placeholder{
-      font-size: 15px;
-    }
-
-    .salidas>div>p{
-      font-size: 12px;
-    }
-  }
-
-  @media (max-width: 550px){
-    section{
-      grid-template-rows: 10% 90%;
-    }
-
-    .entradasTextarea>textarea::placeholder{
-      font-size: 11px;
-    }
-
-    button>#send{
-      width: 25px;
-    }
-
-    .salidas>div>p{
-      font-size: 10px;
-    }
-
-    .salidas>div>button>#iconDelete{
-      width: 10px;
-    }
-
-    .salidas>div>button>#iconDelete:hover{
-      width: 13px;
-    }
-  }
-
-
-  @media (max-width: 420px){
-    h2{
-      font-size: 25px;
-    }
-
-    section{
-      grid-template-rows: 7% 93%;
-    }
-
-    .entradasTextarea>textarea{
-      font-size: 7px;
-      font-weight: 200;
-    }
-
-    .entradasTextarea>textarea::placeholder{
-      font-size: 7px;
-    }
-
-    button>#send{
-      width: 18px;
-    }
-
-    .salidas>div>p{
-      font-size: 7px;
-      font-weight: 200;
-    }
-
-    .entradasButton{
-      border-left: 0.5px dashed;
-      border-top:0.5px solid;
-      border-right:0.5px solid;
-      border-bottom:0.5px solid;
-    }
-
-    .entradasTextarea{
-      border-top:0.5px solid;
-      border-right:0;
-      border-bottom:0.5px solid;
-      border-left:0.5px solid;
-    }
-
-    .salidas{
-      border-right:0.5px solid;
-      border-left: 0.5px solid;
-      border-bottom: 0.5px solid;
-    }
-
-    .salidas>div{
-      border-bottom: 0.2px solid;
-      border-top:0px solid;
-      border-right:0;
-      border-left:0px solid;
-    }
-
-    .salidas>div>button>#iconDelete{
-      width: 7px;
-    }
-
-    .salidas>div>button>#iconDelete:hover{
-      width: 10px;
-    }
-
-  } */
-
-  
+}
